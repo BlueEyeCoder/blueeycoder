@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueEyeCoder - Programmer's Website</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .call-to-action {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .call-to-action__image {
+      flex: 0 0 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 30px;
+    }
+
+    .call-to-action__image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .call-to-action__content {
+      flex: 1;
+    }
+
+    .status-bar.alive {
+      height: 20px;
+      margin-top: 10px;
+      background-color: red;
+    }
+
+    .status-bar {
+      background-color: green;
+    }
+  </style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var statusBar = document.getElementById("statusBar");
+
+    function updateStatusBar() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://google.com", true);
+
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          statusBar.classList.add("alive");
+        } else {
+          statusBar.classList.remove("alive");
+        }
+      };
+
+      xhr.onerror = function() {
+        statusBar.classList.remove("alive");
+      };
+
+      xhr.send();
+    }
+
+    // Check the initial status
+    updateStatusBar();
+
+   
+  });
+</script>
+
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">BlueEyeCoder</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="jumbotron text-center">
+    <h1 class="display-4">Welcome to BlueEyeCoder</h1>
+    <p class="lead">The ultimate destination for programmers</p>
+    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="call-to-action">
+      <div class="call-to-action__image">
+        <img src="blueeyecoder.png" alt="Circle Image">
+      </div>
+      <div class="call-to-action__content">
+        <h2>About BlueEyeCoder</h2>
+        <p>BlueEyeCoder is a programmer-focused website that provides resources, tutorials, and community support for programmers of all levels. Whether you're a beginner or an experienced coder, BlueEyeCoder is here to help you level up your skills and stay up-to-date with the latest technologies.</p>
+        <div id="statusBar" class="status-bar"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="mt-4">Top 9 Most Viewed YouTube Videos about SQL</h1>
+    
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="video-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HXV3zeQKqGY" allowfullscreen></iframe>
+            </div>
+            <p>SQL Tutorial for Beginners | Full Course</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="video-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9Pzj7Aj25lw" allowfullscreen></iframe>
+            </div>
+            <p>SQL Crash Course - Beginner to Intermediate</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="video-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nWeW3sCmD2k" allowfullscreen></iframe>
+            </div>
+            <p>Learn SQL in 1 Hour - SQL Basics for Beginners</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="video-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HXV3zeQKqGY" allowfullscreen></iframe>
+            </div>
+            <p>Advanced SQL Tutorial - Window Functions, Subqueries, Common Table Expressions (CTEs)</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="video-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZS_kXvOeQ5Y" allowfullscreen></iframe>
+            </div>
+            <p>SQL vs NoSQL or MySQL vs MongoDB</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="video-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_jKylhJtPmI" allowfullscreen></iframe>
+            </div>
+            <p>SQL Injection Explained</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="video-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZS_kXvOeQ5Y" allowfullscreen></iframe>
+            </div>
+            <p>SQL vs NoSQL Databases</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="video-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HXV3zeQKqGY" allowfullscreen></iframe>
+            </div>
+            <p>Learn SQL in 30 Minutes</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="video-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9Pzj7Aj25lw" allowfullscreen></iframe>
+            </div>
+            <p>SQL Tutorial - Full Database Course for Beginners</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2023 BlueEyeCoder. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
